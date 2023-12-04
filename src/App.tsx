@@ -48,6 +48,23 @@ function App() {
         console.log("isAdmin is NOT false")
     }
 
+
+    function drawChristmasTree(n) {
+        // Draw the top part of the tree
+        for (let i = 1; i <= n; i++) {
+            let spaces = ' '.repeat(n - i);
+            let stars = '*'.repeat(2 * i - 1);
+            console.log(spaces + stars);
+        }
+
+        // Draw the trunk
+        for (let i = 1; i <= 4; i++) {
+            console.log(' '.repeat(n - 1) + '*');
+        }
+    }
+
+// Call the function with n = 5
+    drawChristmasTree(5);
   return (
     <>
       <div>
